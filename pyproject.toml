@@ -1,0 +1,21 @@
+[project]
+name = "korean-persona-mcp"
+version = "0.1.0"
+description = "MCP server exposing the NVIDIA Nemotron-Personas-Korea dataset"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "huggingface-hub>=0.24.0",
+    "pyarrow>=15.0.0",
+    "pydantic>=2.6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
