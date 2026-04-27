@@ -21,7 +21,7 @@ env/
 data/
 cache/
 .cache/
-
+.claude/
 # IDE / editor
 .vscode/
 .idea/
@@ -37,3 +37,4 @@ desktop.ini
 .env
 .env.*
 !.env.example
+
