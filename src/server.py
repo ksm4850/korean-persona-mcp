@@ -159,4 +159,9 @@ def run_http(host: str, port: int) -> None:
     ensure_dataset()
     mcp.settings.host = host
     mcp.settings.port = port
+    if host not in ("127.0.0.1", "localhost", "::1"):
+        from mcp.server.transport_security import TransportSecuritySettings
+        mcp.settings.transport_security = TransportSecuritySettings(
+            enable_dns_rebinding_protection=False
+        )
     mcp.run(transport="streamable-http")
